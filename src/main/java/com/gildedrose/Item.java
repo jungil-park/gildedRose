@@ -22,6 +22,8 @@ public class Item {
                 return new Backstage(sellIn, quality);
             case "Sulfuras, Hand of Ragnaros":
                 return new Sulfuras(sellIn, quality);
+            case "Conjured Mana Cake":
+                return new Conjured(sellIn, quality);
             default:
                 return new GeneralProduct(name, sellIn, quality);
         }
