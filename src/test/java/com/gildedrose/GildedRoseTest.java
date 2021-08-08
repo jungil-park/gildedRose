@@ -13,7 +13,8 @@ class GildedRoseTest {
         String[] items = {"foo",
             "Aged Brie",
             "Backstage passes to a TAFKAL80ETC concert",
-            "Sulfuras, Hand of Ragnaros"};
+            "Sulfuras, Hand of Ragnaros",
+            "Conjured Mana Cake"};
         Integer[] sellIn = Range.get(-1,15);
         Integer[] quality =  {-1, 0, 1, 2, 49, 50, 51};
 
