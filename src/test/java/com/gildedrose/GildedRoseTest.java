@@ -20,11 +20,10 @@ class GildedRoseTest {
         CombinationApprovals.verifyAllCombinations(this::getGildedRose, items, sellIn, quality);
     }
 
-    private String getGildedRose(String foo, int sellIn, int quality) {
-        Item[] items = new Item[] { new Item(foo, sellIn, quality) };
+    private String getGildedRose(String item, int sellIn, int quality) {
+        Item[] items = new Item[] {Item.createItem(item, sellIn, quality)};
         GildedRose app = new GildedRose(items);
         app.updateQuality();
-        return app.items[0].toString();
+        return app.items[0].toString().trim();
     }
-
 }
