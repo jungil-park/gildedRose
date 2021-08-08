@@ -1,20 +1,15 @@
 package com.gildedrose;
 
-public class AgedBrie extends Item {
-    public AgedBrie(int sellIn, int quality) {
+class AgedBrie extends Item {
+    AgedBrie(int sellIn, int quality) {
 
-        super("Aged Brie", sellIn, quality);
+        super(AGEDBRIE, sellIn, quality);
     }
 
-    public void doUpdate() {
-
-        if (quality < 50) {
-            quality = quality + 1;
-        }
-        sellIn = sellIn - 1;
-        if (sellIn < 0 && quality < 50) {
-            quality = quality + 1;
-        }
-
+    @Override
+    void doUpdate() {
+        sellIn--;
+        if (quality < 50) quality++;
+        if (sellIn < 0 && quality < 50) quality++;
     }
 }

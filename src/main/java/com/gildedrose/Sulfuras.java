@@ -1,10 +1,12 @@
 package com.gildedrose;
 
-public class Sulfuras extends Item {
-    public Sulfuras(int sellIn, int quality) {
+class Sulfuras extends Item {
+    Sulfuras(int sellIn, int quality) {
 
-        super("Sulfuras, Hand of Ragnaros", sellIn, quality);
+        super(SULFURAS, sellIn, quality);
     }
 
-    public void doUpdate() {}
+    @Override
+    void doUpdate() {
+    }
 }
